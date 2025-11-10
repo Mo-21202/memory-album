@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Record & Get QR</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/firebase-example.js"></script>
+  <script defer src="assets/record.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Record a Memory & Get a QR</h1>
+    <div class="grid">
+      <div class="card">
+        <h2>1) Album & Photo</h2>
+        <div class="row3">
+          <div>
+            <label>Album ID</label>
+            <input id="albumId" type="text" placeholder="e.g., grad24" value="demo">
+          </div>
+          <div>
+            <label>Photo # (01–99)</label>
+            <input id="trackNo" type="number" min="1" max="99" value="1">
+          </div>
+          <div>
+            <label>Your name (optional)</label>
+            <input id="senderName" type="text" placeholder="Your name">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>2) Record</h2>
+        <div class="btnRow">
+          <button id="btnRec">● Record</button>
+          <button id="btnStop" disabled>■ Stop</button>
+          <button id="btnPlay" disabled>▶︎ Preview</button>
+          <button id="btnSave" disabled>⬇︎ Download</button>
+          <button id="btnUpload" disabled title="Uploads to Firebase if configured">↑ Upload</button>
+        </div>
+        <div class="small" id="recStatus">Idle.</div>
+        <div class="player"><audio id="preview" controls></audio></div>
+      </div>
+
+      <div class="card">
+        <h2>3) QR Code</h2>
+        <p class="small">After upload, we’ll show a QR that opens the player with your audio.</p>
+        <div class="qr" id="qrBox">QR will appear here.</div>
+        <div class="small" id="qrLink"></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

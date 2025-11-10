@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play Memory</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/play.js"></script>
+</head>
+<body>
+  <main class="wrap player">
+    <header>
+      <h1 id="albumTitle">Album</h1>
+      <span class="badge">Photo <span id="trackNo">--</span></span>
+    </header>
+
+    <section id="status" class="small">Loading…</section>
+
+    <section class="card">
+      <audio id="audio" controls preload="none"></audio>
+    </section>
+
+    <section class="btnRow">
+      <button id="btnPrev">⟵ Prev</button>
+      <button id="btnNext">Next ⟶</button>
+      <a id="contribLink" href="contribute.html">Contribute</a>
+    </section>
+  </main>
+</body>
+</html>
